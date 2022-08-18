@@ -1,0 +1,148 @@
+/* --------------
+Normalize
+-------------- */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* --------------
+Root
+-------------- */
+:root{
+    /* ---- Primary ---- */
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    /* ---- Neutral ---- */
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    }
+
+/* --------------
+Mobile desing
+-------------- */
+/* ---- Body ----*/
+body{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: var(--Very-Light-Gray);
+}
+
+.container{
+    width: 360px;
+    margin: 0px auto;
+    padding: 30px;
+}
+
+/* ---- Header ----- */
+.header{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header__title{
+    font-size: 1.4rem;
+    font-weight: 200;
+    color: var(--Very-Dark-Blue);
+}
+
+.header__title-secondary{
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--Very-Dark-Blue);
+}
+
+.header__text{
+    color: var(--Grayish-Blue);
+}
+
+/* ---- Section ---- */
+
+.section{
+    position: relative;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 20px 1px hsl(0, 0%, 90%);
+}
+
+.section__title{
+    color: var(--Very-Dark-Blue);
+    font-weight: 600;
+}
+
+.section__text{
+    color: var(--Grayish-Blue);
+    font-size: .7rem;
+    margin-bottom: 30px;
+}
+
+.section__image{
+    position: relative;
+    left: 170px;
+    bottom: 0px;
+}
+
+.section--supervisor{
+    border-top: 3px solid var(--Cyan);
+}
+
+.section--builder{
+    border-top: 3px solid var(--Red);
+}
+
+
+.section--karma{
+    border-top: 3px solid var(--Orange);
+}
+
+.section--calculator{
+    border-top: 3px solid var(--Blue);
+}
+
+/* --------------
+Descktop desing
+-------------- */
+
+@media (min-width: 980px), handheld and (orientation: landscape){
+
+    .container{
+        width: 100%;
+    }
+
+    /* ---- Header ---- */
+    .header{
+        padding: 0px 25%;
+    }
+
+    /* ---- Main---- */
+    .main{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .main__box{
+        margin-right: 30px;
+    }
+
+    .main :last-child{
+        margin-right: 0px;
+    }
+
+    /* ---- Section ---- */
+    .section{
+        max-width: 300px;
+    }
+}
